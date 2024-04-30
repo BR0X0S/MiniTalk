@@ -6,7 +6,7 @@
 /*   By: oumondad <oumondad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 15:22:33 by oumondad          #+#    #+#             */
-/*   Updated: 2024/04/30 17:58:43 by oumondad         ###   ########.fr       */
+/*   Updated: 2024/04/30 19:41:41 by oumondad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdio.h>
 # include <limits.h>
 # include <stdlib.h>
+# include <signal.h>
 
 typedef struct s_var
 {
@@ -30,5 +31,6 @@ typedef struct s_var
 int		ft_atoi(char *str);
 char	*ft_itoa(int nb);
 size_t	ft_strlen(char *str);
+void	ft_error(char *str);
 
 #endif

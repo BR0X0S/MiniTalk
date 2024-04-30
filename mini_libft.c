@@ -6,7 +6,7 @@
 /*   By: oumondad <oumondad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 15:22:58 by oumondad          #+#    #+#             */
-/*   Updated: 2024/04/30 17:58:20 by oumondad         ###   ########.fr       */
+/*   Updated: 2024/04/30 18:26:35 by oumondad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	ft_atoi(char *str)
 	data.sign = 1;
 	data.result = 0;
 	if ((str[0] == '-' && str[1] == '\0') || (str[0] == '+' && str[1] == '\0'))
-		ft_error("Error\n");
+		ft_error("Error : PID not correct\n");
 	if (str[data.i] == '-' || str[data.i] == '+')
 	{
 		if (str[data.i] == '-')
@@ -50,11 +50,11 @@ int	ft_atoi(char *str)
 		data.result = data.result * 10 + (str[data.i] - '0');
 		data.i++;
 	}
-	if (str[data.i])
-		ft_error("Error\n");
+	if (str[data.i] || str[0] == '+')
+		ft_error("Error : PID not correct\n");
 	data.result *= data.sign;
 	if (data.result > INT_MAX || data.result < INT_MIN)
-		ft_error("Error\n");
+		ft_error("Error : PID not correct\n");
 	return (data.result);
 }
 
