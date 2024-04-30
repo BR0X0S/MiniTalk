@@ -6,7 +6,7 @@
 #    By: oumondad <oumondad@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/25 21:28:26 by oumondad          #+#    #+#              #
-#    Updated: 2024/04/30 17:34:51 by oumondad         ###   ########.fr        #
+#    Updated: 2024/04/30 17:50:59 by oumondad         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ CFLAGS = -Wall -Wextra -Werror
 
 SRC = server.c mini_libft.c
 
-CSRC = 
+CSRC = client.c mini_libft.c
 
 OBJ = ${SRC:.c=.o}
 

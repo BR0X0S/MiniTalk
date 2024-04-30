@@ -6,7 +6,7 @@
 /*   By: oumondad <oumondad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 15:22:58 by oumondad          #+#    #+#             */
-/*   Updated: 2024/04/30 17:33:38 by oumondad         ###   ########.fr       */
+/*   Updated: 2024/04/30 17:58:20 by oumondad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ size_t	ft_strlen(char *str)
 	return (i);
 }
 
-void    ft_error(char *str)
+void	ft_error(char *str)
 {
-    write(2, str, ft_strlen(str));
-    exit(1);
+	write(2, str, ft_strlen(str));
+	exit(1);
 }
 
 int	ft_atoi(char *str)
