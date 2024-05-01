@@ -6,23 +6,26 @@
 /*   By: oumondad <oumondad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 15:28:08 by oumondad          #+#    #+#             */
-/*   Updated: 2024/04/30 19:51:05 by oumondad         ###   ########.fr       */
+/*   Updated: 2024/05/01 18:35:20 by oumondad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-void biny(char c, pid_t pid)
+void	send_sig(pid_t pid, char c)
 {
-	int i = 0;
-	while(i < 8)
+	int	i;
+
+	i = 0;
+	(void)pid;
+	while (i < 8)
 	{
-		if(c & 128)
+		if (c & 128)
 			kill(pid, SIGUSR1);
 		else
 			kill(pid, SIGUSR2);
-		i++;
 		c = c << 1;
+		i++;
 		usleep(50);
 	}
 }
@@ -30,19 +33,16 @@ void biny(char c, pid_t pid)
 int	main(int ac, char **av)
 {
 	t_var	data;
+	int		i;
 
-	int i = 0;
+	i = 0;
 	if (ac != 3)
-		ft_error("Error : argument not correct\n");
+		ft_error("Error args not correct");
 	data.pid = ft_atoi(av[1]);
-	printf("process id is :%d\n", data.pid);
-
-
-	//.CLEAN 65236536 "SBA"
-	
+	printf("pid is %d\n", data.pid);
 	while (av[2][i])
 	{
-		biny(av[2][i], data.pid);
+		send_sig(data.pid, av[2][i]);
 		i++;
 	}
 	return (0);
