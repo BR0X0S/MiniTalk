@@ -6,7 +6,7 @@
 /*   By: oumondad <oumondad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 15:22:33 by oumondad          #+#    #+#             */
-/*   Updated: 2024/04/30 19:41:41 by oumondad         ###   ########.fr       */
+/*   Updated: 2024/05/02 17:02:45 by oumondad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ typedef struct s_var
 	long	result;
 	pid_t	pid;
 	char	*id;
+	int		s;
+	char	*binary;
 }	t_var;
 
 int		ft_atoi(char *str);
