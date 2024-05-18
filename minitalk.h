@@ -6,7 +6,7 @@
 /*   By: oumondad <oumondad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 15:22:33 by oumondad          #+#    #+#             */
-/*   Updated: 2024/05/02 17:02:45 by oumondad         ###   ########.fr       */
+/*   Updated: 2024/05/18 21:35:07 by oumondad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <limits.h>
 # include <stdlib.h>
 # include <signal.h>
+# include <sys/types.h>
 
 typedef struct s_var
 {
