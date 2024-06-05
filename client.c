@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   client.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oumondad <oumondad@student.42.fr>          +#+  +:+       +#+        */
+/*   By: oumondad <oumondad@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 15:28:08 by oumondad          #+#    #+#             */
-/*   Updated: 2024/05/19 17:08:26 by oumondad         ###   ########.fr       */
+/*   Updated: 2024/06/05 16:34:29 by oumondad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	send_sig(pid_t pid, char c)
 			kill(pid, SIGUSR2);
 		c = c >> 1;
 		i++;
-		usleep(50);
+		usleep(150);
 	}
 }
 
